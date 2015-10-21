@@ -6,6 +6,7 @@ Welcome to my prosthetic memory!
 
 [Bash](bash.md)  
 [Git](git.md)  
+[Gnome](gnome.md)
 [Editor](editor.md)  
 [Linux Native Development.md](linux_native_development.md)  
 [SSL](ssl.md)  
