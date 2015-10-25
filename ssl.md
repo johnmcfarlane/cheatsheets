@@ -4,6 +4,10 @@ Logging into a remote ssh server at *ssh.deathstar.gov* as *darth*:
 
 $ `ssh darth@deathstar.gov`
 
+Quit a frozen ssh session by pressing the *Return* key followed by:
+
+$ `~.`
+
 Copying a file *from* a remote server to the current directory:
 
 $ `scp darth@deathstar.gov:/Users/darth/Documents/plans.txt .`
