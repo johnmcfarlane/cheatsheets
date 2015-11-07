@@ -12,6 +12,10 @@ $ `editor ~/.bashrc`
 
 ### Things to Add to *.bashrc*
 
+To turn on color prompt:
+
+    force_color_prompt=yes
+
 To add a directory a the list of paths search for binaries:
 
     export PATH=$PATH:/home/luke/bin
