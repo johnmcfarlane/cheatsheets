@@ -4,7 +4,7 @@
 
 To choose a text editor in Debian or Ubuntu:
 
-    sudo update-alternatives --config editor
+$ `sudo update-alternatives --config editor`
 
 [[source](http://unix.stackexchange.com/a/42727/102078)]
 
