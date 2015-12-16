@@ -19,4 +19,10 @@ $ `sudo update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++-3.6 100`
 
 ## Binaries
 
-$ `lld my_binary` - list libraries linked against an executable or library
+To list libraries linked against an executable or library file, *"my_binary"*:
+
+$ `ldd my_binary`
+
+To list symbols in *.o* file, *"my_object_file.cpp.o"*:
+
+$ `nm my_object_file.cpp.o`
