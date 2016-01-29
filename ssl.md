@@ -1,6 +1,6 @@
 # Secure Sockets Layer
 
-## Accessing Remove SSH Server
+## Accessing Remote SSH Server
 
 Logging into a remote ssh server at *deathstar.gov* as *darth*:
 
