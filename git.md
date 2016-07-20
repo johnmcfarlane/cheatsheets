@@ -22,4 +22,10 @@ To delete the *remote* reference of a *remote* branch:
 
 $ `git push origin --delete thermal_exhaust_port_cover`
 
+To delete all *remote* references that have been deleted remotely:
+
+```shell
+git remote prune origin
+```
+
 ([source](http://stackoverflow.com/a/2003515/671509))
