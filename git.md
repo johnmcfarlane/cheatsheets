@@ -2,6 +2,10 @@
 
 Git was named in a moment of generous self-promotion.
 
+Terminology:
+* *repo* - repository: a project you manage using Git. 
+  Often represented in the form of a local folder containing all your project files.
+
 ## Useful Commands
 
 ### Deleting Branches
@@ -29,3 +33,17 @@ git remote prune origin
 ```
 
 ([source](http://stackoverflow.com/a/2003515/671509))
+
+## Configuration
+
+### Global .gitignore
+
+Assuming your home folder isn't a repo(!)
+
+$ `git config --global core.excludesfile ~/.gitignore_global`
+
+([source](https://help.github.com/articles/ignoring-files/#create-a-global-gitignore))
+
+### Auto-completion
+
+$ `source /etc/bash_completion.d/git-prompt`
