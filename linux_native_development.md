@@ -2,31 +2,46 @@
 
 ## GCC From Source
 
-To install GCC in */home/rms/gcc* (user space) on Debian or Ubuntu:
+To install GCC 7.2 in */home/rms/gcc-7.2.0* (user space) on Debian or Ubuntu:
 
-1. Download and unzip, e.g. into */home/rms/Download/gcc*.
+1. Download the *.xz* file into your download folder, e.g. */home/rms/Downloads*.  (You can follow instruction #2 while you're waiting for the download to complete.)
 
 2. Install some stuff:
 
+   a. On Debian or Ubuntu:
+   
+      ```sh
+      sudo apt-get install libgmp-dev libmpfr-dev libmpc-dev
+      ```
+   
+   b. On Redhat:
+   
+      ```sh
+      sudo yum install gmp-devel mpfr-devel libmpc-devel
+      ```
+
+3. Unzip, e.g. into */home/rms/Downloads/gcc-7.2.0*.
+
    ```sh
-   sudo apt-get install libgmp-dev libmpfr-dev libmpc-dev
+   cd /home/rms/Downloads/
+   tar xvfJ gcc-7.2.0.tar.xz
    ```
 
-2. Run the `configure` script from a temporary folder:
+4. Run the `configure` script from a temporary folder:
 
    ```
-   mkdir -p /home/rms/tmp/gcc
-   cd /home/rms/tmp/gcc
-   /home/rms/Download/gcc/configure --disable-multilib --prefix=/home/rms/gcc/ --enable-languages=c,c++,lto
+   mkdir -p /home/rms/tmp/gcc-7.2.0
+   cd /home/rms/tmp/gcc-7.2.0
+   /home/rms/Downloads/gcc-7.2.0/configure --disable-multilib --prefix=/home/rms/gcc-7.2.0/ --enable-languages=c,c++,lto
    ```
 
-3. Build:
+5. Build:
 
    ```
    make -j 8
    ```
        
-4. Install:
+6. Install:
 
    ```
    make install
@@ -60,8 +75,8 @@ sudo update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++ 10
 To add new alternative compiler *versions* to the list after installing them:
 
 ```
-sudo update-alternatives --install /usr/bin/gcc gcc /home/rms/gcc/bin/gcc 10
-sudo update-alternatives --install /usr/bin/g++ g++ /home/rms/gcc/bin/g++ 10
+sudo update-alternatives --install /usr/bin/gcc gcc /home/rms/gcc-7.2.0/bin/gcc 10
+sudo update-alternatives --install /usr/bin/g++ g++ /home/rms/gcc-7.2.0/bin/g++ 10
 ```
 
 [[source](http://stackoverflow.com/a/30742451/671509)]
