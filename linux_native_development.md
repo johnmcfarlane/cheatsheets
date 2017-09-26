@@ -123,3 +123,9 @@ Your program, *my_binary*, crashed and you were promised a *core* file ... but t
    ```
    gdb ./DoCoolStuff core -batch -ex bt
    ```
+
+### Disassembly
+
+```sh
+objdump -d -Mintel <object-file>
+```
