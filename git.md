@@ -44,6 +44,12 @@ $ `git config --global core.excludesfile ~/.gitignore_global`
 
 ([source](https://help.github.com/articles/ignoring-files/#create-a-global-gitignore))
 
+### Don't Strip Whitespace
+
+If you want your commit messages to be in commonmark format, you need to disable whitespace stripping:
+
+$ `git config --global commit.cleanup verbatim`
+
 ### Auto-completion
 
 $ `source /etc/bash_completion.d/git-prompt`
