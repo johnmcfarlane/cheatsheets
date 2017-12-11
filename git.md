@@ -50,6 +50,10 @@ If you want your commit messages to be in commonmark format, you need to disable
 
 $ `git config --global commit.cleanup verbatim`
 
-### Auto-completion
+### Don't Make Merge Commits You Weren't Asked to Make!
+
+$ `git config --global merge.ff only`
+
+## Auto-completion
 
 $ `source /etc/bash_completion.d/git-prompt`
