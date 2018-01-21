@@ -21,5 +21,5 @@ You may wish to set the time to that of the source file.
 This way, *rsync* won't want to copy the file again next time.
 Use the `--times` switch:
 ```shell
-rsync -r a b
+rsync -t a b
 ```
