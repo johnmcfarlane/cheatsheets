@@ -10,7 +10,7 @@ $ `sudo update-alternatives --config editor`
 
 ## VIM
 
-VIM is an acronym for Vi Improved.
+VIM is an acronym for Vi Improved. Here is a [VIM tutorial](http://www.openvim.com/).
 
 ### Quitting
 
@@ -21,7 +21,3 @@ If you accidentally start *vim* here's how to quit VIM:
 3. press *Enter*.
 
 [[source](http://stackoverflow.com/a/11828573/671509)]
-
-### Starting
-
-Here is a [VIM tutorial](http://www.openvim.com/) which was [recommended](https://www.youtube.com/watch?v=OQXEzwXtzJ8) by Angela Harms. She uses Ruby. Ergo you should never use VIM.
