@@ -17,11 +17,3 @@ engelberthumperdinck ALL=(ALL) ALL
 assuming, of course, that your username is *engelberthumperdinck*. Then quit the editor. (Good luck with that.)
 
 $ `exit`
-
-## Troubleshooting
-
-> "My app stopped accepting keystrokes."
-
-From any terminal, try:
-
-$ `ibus-daemon -rd`
