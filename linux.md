@@ -4,9 +4,10 @@ On the desktop I'm most familiar with Debian and its variants, esp. Raspbian and
 
 ## `sudo`
 
-$ `su`  
-$ `apt-get install sudo`  
-$ `visudo`
+1. Choose an [editor](editor.md).
+1. `su`  
+1. `apt-get install sudo`  
+1. `visudo`
 
 Then add line
 
