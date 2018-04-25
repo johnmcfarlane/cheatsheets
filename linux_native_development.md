@@ -97,6 +97,14 @@ To list symbols in *.o* file, *"my_object_file.cpp.o"*:
 nm my_object_file.cpp.o
 ```
 
+### Demangling
+
+Use [`c++filt`](https://sourceware.org/binutils/docs/binutils/c_002b_002bfilt.html) to demangle C++ symbols. It is a very versatile tool that can be used in any text containing mangled C++, e.g.:
+
+```
+perf report | c++filt | less -S
+```
+
 ### Debugging
 
 Your program, *my_binary*, crashed and you were promised a *core* file ... but they lied!
