@@ -18,3 +18,11 @@ engelberthumperdinck ALL=(ALL) ALL
 assuming, of course, that your username is *engelberthumperdinck*. Then quit the editor. (Good luck with that.)
 
 $ `exit`
+
+## `du`
+
+To list **d**isk **u**sage of everything in the current directory in descending order of how badly you want to delete it:
+
+```sh
+du --max-depth 1 -ak | sort -rh
+```
