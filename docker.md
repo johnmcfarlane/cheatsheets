@@ -27,3 +27,7 @@ Delete all containers:
 Delete all images:
 
     docker rmi $(docker images -q)
+
+Delete all unused volumes:
+
+    docker volume prune
