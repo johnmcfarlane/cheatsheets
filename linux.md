@@ -19,10 +19,28 @@ assuming, of course, that your username is *engelberthumperdinck*. Then quit the
 
 $ `exit`
 
-## `du`
+## One-liners
+
+### `du`
 
 To list **d**isk **u**sage of everything in the current directory in descending order of how badly you want to delete it:
 
 ```sh
 du --max-depth 1 -ak | sort -rh
+```
+
+### Cheap WinDirStat:
+
+All the files/directories in your home directory, biggest first:
+
+```sh
+du -ah --max-depth 1 ~ 2> /dev/null | sort -hr | less
+```
+
+### Newest Files
+
+All the files in your home directory, newest first:
+
+```sh
+find ~ -type f | xargs stat -c "%y %n" 2> /dev/null | sort -r | less
 ```
