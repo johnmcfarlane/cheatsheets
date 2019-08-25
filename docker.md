@@ -53,7 +53,7 @@ Delete all unused volumes:
    ```sh
    apt update
    apt upgrade
-   apt install bash-completion ccache cmake git htop man nano tmux
+   apt install bash-completion ccache cmake git htop iputils-ping man nano tmux
    ```
 
 1. Fix bash completion ([source](https://askubuntu.com/a/203013/112190), [source](https://askubuntu.com/a/1026978/112190)):
