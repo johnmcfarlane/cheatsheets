@@ -8,11 +8,18 @@ These instructions are incomplete and only tested on Ubuntu 18.04 which is still
 
        sudo apt-get install docker
 
-2. Configure and restart:
+1. Configure and restart:
 
        sudo systemctl restart docker
        sudo systemctl daemon-reload
        sudo docker run hello-world
+       
+1. Avoid having to type `sudo` all the time:
+
+   ```sh
+   sudo gpasswd -a $USER docker
+   newgrp docker
+   ```
 
 ## Hacks
 
@@ -67,4 +74,36 @@ Delete all unused volumes:
 
    ```sh
    echo "set -g terminal-overrides 'xterm*:smcup@:rmcup@'" >> ~/.tmux.conf
+   ```
+
+## Better Still, Make a Dockerfile!
+
+1. Populate a Dockerfile like [this one](https://github.com/elcojacobs/brewblox-firmware/blob/ed70d66f0495103663173fbc5f6c9ba532b41817/docker/compiler/Dockerfile) and build it:
+
+   ```sh
+   docker build .
+   ```
+
+1. Identify the image:
+
+   ```sh
+   docker images
+   ```
+   
+   > REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+   > <none>              <none>              019f4128c46e        11 seconds ago      146MB
+   > ubuntu              16.04               5e13f8dd4c1a        4 weeks ago         120MB
+   
+   Hint: it's 019f4128c46e.
+
+1. Create a container
+
+   ```sh
+   docker run -it --name my_container -d 019f4128c46e
+   ```
+
+1. Dive in!
+
+   ```sh
+   docker attach my_container
    ```
