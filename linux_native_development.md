@@ -38,7 +38,7 @@ To install GCC 7.2 in */home/rms/gcc-7.2.0* (user space) on Debian or Ubuntu:
 5. Build:
 
    ```
-   make -j 8
+   make -j $(nproc)
    ```
        
 6. Install:
