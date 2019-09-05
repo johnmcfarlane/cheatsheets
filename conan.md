@@ -1,5 +1,21 @@
 # Conan Package Manager
 
+## Baffling Sequence of Arbitrary Symbols
+
+<pre>
+Version:                 <b>user/repo/package:user/1.2.3:channel</b>
+URL: https://bintray.com/<b>user/repo/package:user/1.2.3:channel</b>
+
+grabber: conan remote add <REMOTE> https://api.bintray.com/conan/user/repo
+
+recipe:                             <b>package/1.2.3@user/channel</b>
+intaller:             conan install <b>package/1.2.3@user/channel</b> --build=missing
+conanfile.py:    python requires = "<b>package/1.2.3@user/channel</b>"
+
+build:   conan create . <b>user/repo</b> <your_profile_and_settings>
+conan upload -r _user/_repo --all <b>package/1.2.3@user/channel</b>
+</pre>
+
 ## Some Things to Try While Uploading a Package to Bintray
 
 ```bash
