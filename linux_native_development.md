@@ -11,7 +11,7 @@ To install GCC 7.2 in */home/rms/gcc-7.2.0* (user space) on Debian or Ubuntu:
    a. On Debian or Ubuntu:
    
       ```sh
-      sudo apt-get flex install libgmp-dev libmpfr-dev libmpc-dev
+      sudo apt-get install flex libgmp-dev libmpfr-dev libmpc-dev
       ```
    
    b. On Redhat:
