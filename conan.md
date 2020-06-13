@@ -22,6 +22,7 @@ conan upload -r _user/_repo --all <b>package/1.2.3@user/channel</b>
 pip install conan
 conan remote add johnmcfarlane/cnl https://api.bintray.com/conan/johnmcfarlane/cnl
 conan user -p <key> -r johnmcfarlane/cnl johnmcfarlane
+cd cnl-working-directory
 conan create . cnl/0.0.1@johnmcfarlane/development
 conan upload cnl/0.0.1@johnmcfarlane/development -r johnmcfarlane/cnl
 ```
