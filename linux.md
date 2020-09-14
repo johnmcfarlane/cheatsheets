@@ -19,6 +19,26 @@ assuming, of course, that your username is *engelberthumperdinck*. Then quit the
 
 $ `exit`
 
+## Difficult X11 Servers
+
+Some things to try:
+
+1. Add these to _/etc/ssh/sshd_config_:
+
+   ```
+   X11Forwarding yes
+   X11DisplayOffset 10
+   X11UseLocalhost yes
+   ```
+
+2. Run `xauth`:
+
+   ```bash
+   xauth add localhost/unix:10 MIT-MAGIC-COOKIE-1 d65608ea2a561b4ec6cf137e0e99f635
+   ```
+ 
+3. Use `gnome-terminal.real` instead of `gnome-terminal`.
+
 ## One-liners
 
 ### `du`
