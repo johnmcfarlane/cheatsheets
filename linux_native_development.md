@@ -127,6 +127,20 @@ Your program, *my_binary*, crashed and you were promised a *core* file ... but t
    ulimit -c unlimited
    ```
 
+1. Disable Apport:
+
+   ```sh
+   sudo systemctl disable apport.service
+   ```
+
+1. Edit _core_pattern_
+
+   ```sh
+   sudo nano /proc/sys/kernel/core_pattern
+   ```
+   
+   and replace file with "core".
+
 1. Re-run *my_binary*:
 
    ```
