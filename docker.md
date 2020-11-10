@@ -29,7 +29,7 @@ From [TechOverflow](https://techoverflow.net/2013/10/22/docker-remove-all-images
 
 Delete all containers:
 
-    docker rm $(docker ps -a -q)
+    docker rm -f $(docker ps -a -q)
     
 Delete all images:
 
