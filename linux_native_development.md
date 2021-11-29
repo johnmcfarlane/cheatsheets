@@ -32,7 +32,7 @@ To install GCC 7.2 in */home/rms/gcc-7.2.0* (user space) on Debian or Ubuntu:
    ```
    mkdir -p /home/rms/tmp/gcc-7.2.0
    cd /home/rms/tmp/gcc-7.2.0
-   /home/rms/Downloads/gcc-7.2.0/configure --disable-multilib --prefix=/home/rms/gcc-7.2.0/ --enable-languages=c,c++,lto
+   /home/rms/Downloads/gcc-7.2.0/configure --disable-bootstrap --disable-multilib --prefix=/home/rms/gcc-7.2.0/ --enable-languages=c,c++,lto
    ```
 
 5. Build:
