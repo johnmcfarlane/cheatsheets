@@ -21,6 +21,13 @@ These instructions are incomplete and only tested on Ubuntu 18.04 which is still
    newgrp docker
    ```
 
+1. Or just be lazy and type magic stuff every time:
+
+   ```sh
+   sudo service docker start
+   sudo setfacl --modify user:john:rw /var/run/docker.sock
+   ```
+
 ## Hacks
 
 ### Remove all images and containers
