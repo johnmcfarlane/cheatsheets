@@ -4,9 +4,13 @@
 
 To install GCC 7.2 in */home/rms/gcc-7.2.0* (user space) on Debian or Ubuntu:
 
-1. Download the *.xz* file into your download folder, e.g. */home/rms/Downloads*.  (You can follow instruction #2 while you're waiting for the download to complete.)
+1. Clone
 
-2. Install some stuff:
+   ```sh
+   git clone git://gcc.gnu.org/git/gcc.git
+   ```
+
+1. Install some stuff:
 
    a. On Debian or Ubuntu:
    
@@ -20,19 +24,11 @@ To install GCC 7.2 in */home/rms/gcc-7.2.0* (user space) on Debian or Ubuntu:
       sudo yum install flex gmp-devel mpfr-devel libmpc-devel
       ```
 
-3. Unzip, e.g. into */home/rms/Downloads/gcc-7.2.0*.
-
-   ```sh
-   cd /home/rms/Downloads/
-   tar xvfJ gcc-7.2.0.tar.xz
-   ```
-
-4. Run the `configure` script from a temporary folder:
+1. Run the `configure` script from a temporary folder:
 
    ```
-   mkdir -p /home/rms/tmp/gcc-7.2.0
-   cd /home/rms/tmp/gcc-7.2.0
-   /home/rms/Downloads/gcc-7.2.0/configure --disable-bootstrap --disable-multilib --prefix=/home/rms/gcc-7.2.0/ --enable-languages=c,c++,lto
+   mkdir -p build && cd build
+   path-to-gcc/configure --disable-bootstrap --disable-multilib --prefix=/home/rms/gcc-7.2.0/ --enable-languages=c,c++,lto
    ```
 
 5. Build:
