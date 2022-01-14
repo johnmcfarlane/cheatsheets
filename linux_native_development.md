@@ -45,6 +45,16 @@ To install GCC 7.2 in */home/rms/gcc-7.2.0* (user space) on Debian or Ubuntu:
 
 ## Clang With the Trimmings
 
+1. ```sh
+   git clone https://github.com/llvm/llvm-project.git
+   ```
+
+2. ```sh
+   mkdir build
+   cd build
+   cmake CXX=clang++ CC=clang cmake ../llvm-project/llvm/ -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;libcxx;libcxxabi;compiler-rt" -DCMAKE_INSTALL_PREFIX=/home/john/llvm -G Ninja
+   ```
+   
 MemorySanitizer is an especially difficult tool to use because it requires the standard library to be built instrumented.
 Here's a recipe for configuring all that:
 
