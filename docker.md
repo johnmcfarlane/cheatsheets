@@ -28,6 +28,8 @@ These instructions are incomplete and only tested on Ubuntu 18.04 which is still
    sudo setfacl --modify user:john:rw /var/run/docker.sock
    ```
 
+For installing Docker on Windows, try [this guide](https://dev.to/bowmanjd/install-docker-on-windows-wsl-without-docker-desktop-34m9).
+
 ## Hacks
 
 ### Remove all images and containers
