@@ -62,6 +62,18 @@ Here's a recipe for configuring all that:
 CXX=clang++ CC=clang cmake ../llvm-project/llvm/ -DCMAKE_BUILD_TYPE=MinSizeRel -DCMAKE_CXX_COMPILER_LAUNCHER=ccache -DLLVM_ENABLE_PROJECTS="clang;clang-tools-extra;libcxx;libcxxabi;compiler-rt" -DLLVM_USE_SANITIZER=Memory -DCMAKE_INSTALL_PREFIX=/home/john/llvm -G Ninja
 ```
 
+### GDB From Source With Pretty Printing
+
+To install latest GDB to _/home/dear-reader/gdb/bin/gdb_.
+
+```sh
+git clone git://sourceware.org/git/binutils-gdb.git
+cd binutils-gdb
+./configure --prefix=$HOME/gdb --with-python=python3
+make -j 8
+make install
+```
+
 ## Alternative Compilers
 
 ### Choosing 
