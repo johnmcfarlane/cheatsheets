@@ -57,3 +57,9 @@ $ `git config --global merge.ff only`
 ## Auto-completion
 
 $ `source /etc/bash_completion.d/git-prompt`
+
+## Pretty things
+
+### A Live View of the Things You Are Personally Breaking
+
+$ `watch --color -n 1 git log --decorate --graph --all --simplify-by-decoration --author=jmcfarla --color=always`
