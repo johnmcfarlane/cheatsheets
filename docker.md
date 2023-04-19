@@ -111,8 +111,16 @@ Delete all unused volumes:
    docker run -it --name my_container -d 019f4128c46e
    ```
 
+1. Copy SSH key over:
+
+   ```sh
+   docker cp ~/.ssh/id_rsa my_container:/root/.ssh/id_rsa
+   ```
+
 1. Dive in!
 
    ```sh
    docker attach my_container
    ```
+
+1. Quit without stopping the container: Ctrl-P, Ctrl-Q
