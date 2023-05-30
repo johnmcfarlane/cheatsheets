@@ -67,6 +67,7 @@ CXX=clang++ CC=clang cmake ../llvm-project/llvm/ -DCMAKE_BUILD_TYPE=MinSizeRel -
 To install latest GDB to _/home/dear-reader/gdb/bin/gdb_.
 
 ```sh
+sudo apt install bison
 git clone git://sourceware.org/git/binutils-gdb.git
 cd binutils-gdb
 ./configure --prefix=$HOME/gdb --with-python=python3
