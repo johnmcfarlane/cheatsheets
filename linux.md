@@ -37,7 +37,7 @@ Some things to try:
    xauth add localhost/unix:10 MIT-MAGIC-COOKIE-1 d65608ea2a561b4ec6cf137e0e99f635
    ```
  
-3. Use `gnome-terminal.real` instead of `gnome-terminal`.
+3. To figure out why (of the many reasons) why gnome-terminal fails to run, [`tail -f /var/log/syslog`](https://askubuntu.com/a/1128108/112190).
 
 ## One-liners
 
